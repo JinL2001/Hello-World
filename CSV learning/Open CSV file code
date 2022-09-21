@@ -1,6 +1,6 @@
 import csv
 
-with open('a.csv','r') as csvfile:
+with open('csvfile.csv','r') as csvfile:
     reader = csv.reader(csvfile)
     rows = [row for row in reader]
     print(rows)
