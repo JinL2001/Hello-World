@@ -1,0 +1,8 @@
+import csv
+
+with open('a.csv','r') as csvfile:
+    reader = csv.reader(csvfile)
+    rows = [row for row in reader]
+    print(rows)
+
+#This code is for printing out all of the list from the csv.
