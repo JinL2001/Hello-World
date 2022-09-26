@@ -1,0 +1,15 @@
+import pyautogui
+import time
+
+tracking_num = ' ' #The String that you are inputing to track
+
+pyautogui.click(x=20, y=23, clicks=1, interval=1, button='left') # First Tab
+
+pyautogui.click(x=353, y=11, clicks=1, interval=1, button='left') # Second Tab
+
+pyautogui.click(x=1202, y=535, clicks=1, interval=1, button='left') # Tracking calumn
+
+pyautogui.typewrite(tracking_num, interval=0.1) #inputing the tracking string on 0.1s speed
+
+pyautogui.click(x=1124, y=573, clicks=1, interval=1, button='left') # Tracking
+
