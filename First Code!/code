@@ -1,0 +1,53 @@
+import csv
+
+with open('Shipments 09-23-22 - Google Docs.csv','r') as csvfile:
+    reader = csv.reader(csvfile)
+    rows = [row for row in reader]
+
+
+lenlist = len(rows)
+
+list = []
+ref1 = []
+ref2 = []
+
+lst = rows
+
+#find the Ref 1
+str1 = ' Package Ref No.1: '
+
+for i in range(0,lenlist):
+    res = [string for string in rows[i] if str1 in string]
+    list.append(res)
+
+#print(list)
+
+for i in range(0,len(list)):
+    if list[i] != []:
+        ref1.append(list[i])
+
+
+print(ref1)
+
+new_list = []
+
+for l in ref1:
+    if l not in new_list:
+        new_list.append(l)
+
+print(new_list)
+'''
+str2 = ' Package Ref No.2:'
+
+for i in range(0,lenlist):
+    res = [string for string in rows[i] if str2 in string]
+    list.append(res)
+
+#print(list)
+
+for i in range(0,len(list)):
+    if list[i] != []:
+        ref2.append(list[i])
+
+print(ref2)
+'''
